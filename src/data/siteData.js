@@ -59,21 +59,60 @@ import img4 from "../assets/images/img4.JPG";
 export const ROOMS_DATA = [
   {
     name: "Standard Studio",
-    price: 3499,
+    price: 2000,
     img: ssImg,
     features: ["King Bed", "City View", "Smart TV", "AC"],
+    description:
+      "Relax in our well-furnished Standard Studio featuring a cozy Queen Bed, air conditioning, Smart TV, and all essential comforts for a pleasant stay.",
+    amenities: [
+      "❄️ Air Conditioning",
+      "🛏️ Queen Bed",
+      "📺 Smart TV",
+      "🛁 Attached Bathroom",
+      "🧴 Toiletries",
+      "🧺 Fresh Towels",
+      "🚿 Hot Water",
+      "📶 Free Wi-Fi",
+      "💧 Drinking Water",
+    ],
   },
   {
     name: "Suite Room",
-    price: 4999,
+    price: 2500,
     img: img4,
     features: ["Work Desk", "Lounge Area", "Mini Bar", "AC"],
+    description:
+      "Experience extra comfort in our spacious Suite Room featuring 1 Queen Bed and 1 Single Bed, perfect for families or small groups. Enjoy air conditioning, a Smart TV, and modern amenities for a relaxing and memorable stay.",
+    amenities: [
+      "❄️ Air Conditioning",
+      "🛏️ Queen Bed",
+      "📺 Smart TV",
+      "🛁 Attached Bathroom",
+      "🧴 Toiletries",
+      "🧺 Fresh Towels",
+      "🚿 Hot Water",
+      "📶 Free Wi-Fi",
+      "💧 Drinking Water",
+    ],
   },
   {
     name: "Family Room",
-    price: 6299,
+    price: 4000,
     img: img8,
     features: ["2 Queen Beds", "Sofa", "Bath Tub", "Balcony"],
+    description:
+      "Perfect for families and groups, our spacious Family Room features 4 Queen Beds and air conditioning, offering ample space and modern comforts for a relaxing and enjoyable stay.",
+    amenities: [
+      "❄️ Air Conditioning",
+      "🛏️ Queen Bed",
+      "📺 Smart TV",
+      "🛁 Attached Bathroom",
+      "🧴 Toiletries",
+      "🧺 Fresh Towels",
+      "🚿 Hot Water",
+      "📶 Free Wi-Fi",
+      "💧 Drinking Water",
+    ],
   },
   // {
   //   name: "Suite Room",
@@ -177,3 +216,38 @@ export const STATS_DATA = [
 ];
 
 export const BOOKING_URL = "https://www.bookingengine.sonachala.com/#/hotels/pds-residency";
+
+export const FAQ_DATA = [
+  {
+    question: "What are the check-in and check-out timings?",
+    answer: "Check-in starts from 12:00 PM and check-out is before 11:00 AM.",
+  },
+  {
+    question: "Is car parking available?",
+    answer: "Yes, we provide ample car parking for all our guests.",
+  },
+  {
+    question: "Do you provide cooking facilities?",
+    answer: "Yes, guests can use our cooking facilities for preparing home-style meals.",
+  },
+  {
+    question: "Is a dining area available?",
+    answer: "Yes, we have a spacious dining area for families and groups.",
+  },
+  {
+    question: "Does the guest house offer mountain views?",
+    answer: "Yes, guests can enjoy beautiful mountain views from the property.",
+  },
+  {
+    question: "Is the guest house suitable for families and groups?",
+    answer: "Yes,PDS Residency is ideal for families, pilgrims, and group stays.",
+  },
+  {
+    question: "How can I book a room?",
+    answer: "You can click the 'Book Now' button on the website or contact us directly for assistance.",
+  },
+  {
+    question: "Is the guest house located near Arunachaleswarar Temple?",
+    answer: "Yes, PDS Residency is conveniently located for guests visiting Arunachaleswarar Temple and Girivalam.",
+  },
+];

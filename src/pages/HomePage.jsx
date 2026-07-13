@@ -7,6 +7,7 @@ import About from "../components/About";
 import Amenities from "../components/Amenities";
 import Rooms from "../components/Rooms";
 import Gallery from "../components/Gallery";
+import FAQ from "../components/FAQ";
 import Reviews from "../components/Reviews";
 import Nearby from "../components/Nearby";
 import Location from "../components/Location";
@@ -41,6 +42,7 @@ export default function HomePage() {
       <Amenities />
       <Rooms />
       <Gallery />
+      <FAQ />
       <Reviews />
       <Nearby />
       <Location />

@@ -10,7 +10,7 @@ function scrollTo(id) {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
-function RoomCard({ name, price, img, features }) {
+function RoomCard({ name, price, img, features, description, amenities }) {
   const [h, setH] = useState(false);
   return (
     <div
@@ -96,6 +96,50 @@ function RoomCard({ name, price, img, features }) {
             </span>
           ))}
         </div>
+        {description && (
+          <div
+            style={{
+              fontSize: 14,
+              lineHeight: 1.5,
+              color: "#6B7280",
+              marginBottom: 16,
+            }}
+          >
+            {description}
+          </div>
+        )}
+        {amenities && amenities.length > 0 && (
+          <div style={{ marginBottom: 18 }}>
+            <div
+              style={{
+                fontSize: 13,
+                fontWeight: 600,
+                color: T.primaryDark,
+                marginBottom: 8,
+              }}
+            >
+              Amenities
+            </div>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+              {amenities.map((amenity, index) => (
+                <span
+                  key={index}
+                  style={{
+                    fontSize: 11,
+                    padding: "4px 10px",
+                    borderRadius: 999,
+                    background: "rgba(108,191,132,0.08)",
+                    color: T.text,
+                    fontWeight: 500,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {amenity}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         <div style={{ marginTop: "auto" }}>
           <PillButton href={BOOKING_URL} target="_blank" rel="noopener noreferrer" block T={T}>
             Book Now <ArrowRight size={14} />
@@ -120,13 +164,11 @@ export default function Rooms() {
           subtitle="Handpicked interiors, premium linens, and every comfort you'd expect from a 5-star stay."
           T={T}
         />
-        <div className="row g-4">
+        <div className="rooms-grid">
           {ROOMS_DATA.map((r, i) => (
-            <div key={r.name} className="col-md-6 col-xl-3">
-              <Reveal delay={i * 0.08}>
-                <RoomCard {...r} />
-              </Reveal>
-            </div>
+            <Reveal key={r.name} delay={i * 0.08}>
+              <RoomCard {...r} />
+            </Reveal>
           ))}
         </div>
       </div>
